@@ -94,3 +94,28 @@ API de um produto para organização de campeonatos de tênis de mesa.
             "statusCode": 200,
             "errorCode": 200
         }
+
+## Championship Collection [/championships]
+
+### List all championships
+
++ Response 200 (application/json)
+
+            [
+                {
+                    "id": "9c946cdf-c47e-40ac-ae1d-016f19f13b77",
+                    "name": "Taça",
+                    "created_at": "2018-10-15T14:05:31.742Z",
+                    "updated_at": "2018-10-15T14:06:47.132Z",
+                    "users": [
+                                {
+                                    "id": "a06ffb0c-c722-4bc2-945b-d56a4f4b4ee1",
+                                    "name": "Matheus Danemberg",
+                                    "email": "matheus@nave.rs",
+                                    "role_id": "526775d4-7f17-4432-8c74-466e2f25d501",
+                                    "created_at": "2018-10-15T14:03:39.081Z",
+                                    "updated_at": "2018-10-15T14:03:39.081Z"
+                                }
+                            ]
+                }
+            ]
