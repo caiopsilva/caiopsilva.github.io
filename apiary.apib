@@ -58,6 +58,10 @@ API de um produto para organização de campeonatos de tênis de mesa.
 
 ### Update a User [PUT]
 
++ Parameters
+    
+    + id: 7b5d6d36-1a65-4b80-9638-f6c40793d838 (uuid)
+
 + Request (application/json)
 
         {
@@ -138,3 +142,50 @@ API de um produto para organização de campeonatos de tênis de mesa.
                 "updated_at": "2018-10-16T14:05:38.688Z",
                 "users": []
             }
+            
+## Championship By Id [/championships/{id}]
+
+### Update a championship [PUT]
+
++ Parameters
+    
+    + id: 7b5d6d36-1a65-4b80-9638-f6c40793d838 (uuid)
+    
++ Request (application/json)
+
+        {
+            "name":"Taça Nave",
+            "users": ["a06ffb0c-c722-4bc2-945b-d56a4f4b4ee1", "b306d33e-baaa-4ba0-9b64-393fe4940f12"]
+        }
+        
++ Response 200 (application/json)
+
+        {
+            "id": "9c946cdf-c47e-40ac-ae1d-016f19f13b77",
+            "name": "Taça",
+            "created_at": "2018-10-15T14:05:31.742Z",
+            "updated_at": "2018-10-15T14:06:47.132Z",
+            "users": [
+                {
+                    "a06ffb0c-c722-4bc2-945b-d56a4f4b4ee1": {
+                        "merge": false,
+                        "add": true,
+                        "remove": false
+                    }
+                },
+                {
+                    "b306d33e-baaa-4ba0-9b64-393fe4940f12": {
+                        "merge": false,
+                        "add": true,
+                        "remove": false
+                    }
+                },
+                {
+                    "31b1918e-0dc4-4d03-9f68-34febac7e0fa": {
+                        "merge": false,
+                        "add": true,
+                        "remove": false
+                    }
+                }
+            ]
+        }
