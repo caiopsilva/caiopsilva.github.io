@@ -1,0 +1,58 @@
+FORMAT: 1A
+HOST: http://api-navetest.herokuapp.com
+
+# api-navetest
+
+API de um produto para organização de campeonatos de tênis de mesa.
+
+## Users Collection [/users]
+
+### List All Users [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": "a06ffb0c-c722-4bc2-945b-d56a4f4b4ee1",
+                "name": "Matheus Danemberg",
+                "email": "matheus@nave.rs",
+                "role_id": "526775d4-7f17-4432-8c74-466e2f25d501",
+                "created_at": "2018-10-15T14:03:39.081Z",
+                "updated_at": "2018-10-15T14:03:39.081Z",
+                "role": {
+                    "id": "526775d4-7f17-4432-8c74-466e2f25d501",
+                    "name": "player"
+                }
+            }
+        ]
+
+### Create a New User [POST]
+
+
++ Request (application/json)
+
+        {
+            "email": "juju2@nave.rs",
+            "name": "Juliano Reis",
+            "password": "juju123",
+            "role_id": "526775d4-7f17-4432-8c74-466e2f25d501"
+        }
+
++ Response 200 (application/json)
+
+    + Body
+
+            {
+                "id": "7b5d6d36-1a65-4b80-9638-f6c40793d838",
+                "name": "Juliano Reis",
+                "email": "juju2@nave.rs",
+                "role_id": "526775d4-7f17-4432-8c74-466e2f25d501",
+                "created_at": "2018-10-16T12:39:16.122Z",
+                "updated_at": "2018-10-16T12:39:16.122Z",
+                "role": {
+                    "id": "526775d4-7f17-4432-8c74-466e2f25d501",
+                    "name": "player"
+                }
+            }
+            
+### Update a New User [POST]
