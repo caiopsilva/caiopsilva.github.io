@@ -1,9 +1,10 @@
 FORMAT: 1A
-HOST: http://api-navetest.herokuapp.com
+HOST: http://api-navetest.herokuapp.com/v1
 
 # api-navetest
 
 API de um produto para organização de campeonatos de tênis de mesa.
+As partidas são geradas automaticamentes.
 
 ## Users Collection [/users]
 
@@ -235,3 +236,40 @@ API de um produto para organização de campeonatos de tênis de mesa.
             "statusCode": 200,
             "errorCode": 200
         }
+        
+## Matches Collection [/matches]
+
+### List all matches [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": "97d30c71-40d6-4eb8-9ccd-168b43a6efc7",
+                "score_user1": "11 x 7",
+                "score_user2": "11 x 7",
+                "finished": true,
+                "championship_id": "9c946cdf-c47e-40ac-ae1d-016f19f13b77",
+                "created_at": "2018-10-15T15:22:51.426Z",
+                "updated_at": "2018-10-15T17:29:14.245Z",
+                "users": [
+                    {
+                        "id": "a06ffb0c-c722-4bc2-945b-d56a4f4b4ee1",
+                        "name": "Matheus Danemberg",
+                        "email": "matheus@nave.rs",
+                        "role_id": "526775d4-7f17-4432-8c74-466e2f25d501",
+                        "created_at": "2018-10-15T14:03:39.081Z",
+                        "updated_at": "2018-10-15T14:03:39.081Z",
+                    },
+                    {
+                        "id": "b306d33e-baaa-4ba0-9b64-393fe4940f12",
+                        "name": "Joao Bretanha",
+                        "email": "joao@nave.rs",
+                        "role_id": "526775d4-7f17-4432-8c74-466e2f25d501",
+                        "created_at": "2018-10-15T14:04:24.950Z",
+                        "updated_at": "2018-10-15T14:04:24.950Z",
+                    }
+                ]
+            
+            }
+        ]
